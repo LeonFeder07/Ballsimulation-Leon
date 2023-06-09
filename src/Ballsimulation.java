@@ -8,6 +8,7 @@ public class Ballsimulation {
 
     private Ball ball;
     private Gravball gravball;
+    private Farbball farbball;
     private Hindernis[] hindernis;
 
     public Ballsimulation() {
@@ -24,6 +25,8 @@ public class Ballsimulation {
 
         ball = new Ball(0, 200, 0, 20);
         ball.werfen(new GLVektor(1, 0, 0));
+        farbball = new Farbball(0, 200, 0, 20);
+        farbball.werfen(new GLVektor(1, 0, 0));
         gravball = new Gravball(0, 50, 0, 30);
         gravball.werfen(new GLVektor(1, 0, 0));
 
@@ -31,13 +34,18 @@ public class Ballsimulation {
     }
 
     public void fuehreAus() {
+        long time=System.currentTimeMillis();
         while (!tastatur.esc()) {
 
             ball.bewegeDich();
+            farbball.bewegeDich();
             gravball.bewegeDich();
+            gravball.falle();
+
             for (int j = 0; j < 2; j++) {
                 ball.bearbeiteHindernis(hindernis[j]);
                 gravball.bearbeiteHindernis(hindernis[j]);
+                farbball.bearbeiteHindernis(hindernis[j]);
 
                 Sys.warte();
             }

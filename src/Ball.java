@@ -1,6 +1,6 @@
 import GLOOP.*;
 public class Ball{    
-    private GLKugel kugel;    
+    protected GLKugel kugel;
     private GLVektor bewegung;
     private double radius;
 
@@ -8,6 +8,7 @@ public class Ball{
         kugel    = new GLKugel(pX,pY,pZ, 20);
         bewegung = new GLVektor(0,0,0);
         radius   = pRadius;
+
     }
 
     public void bewegeDich(){
