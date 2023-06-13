@@ -42,6 +42,7 @@ public class Ballsimulation {
          if(System.currentTimeMillis()-time>= 500){
              double random=Math.random();
     farbball.farbwechsel(1-random,1-random/2,0+random);
+    speedball.farbwechsel(1-random,0.5+random/2,1-random/2);
     time=System.currentTimeMillis();
 }
             ball.bewegeDich();

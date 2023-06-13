@@ -4,6 +4,7 @@ public class Ball{
     private GLVektor bewegung;
     private double radius;
 
+
     public Ball(double pX, double pY, double pZ, double pRadius){
         kugel    = new GLKugel(pX,pY,pZ, pRadius);
         bewegung = new GLVektor(0,0,0);

@@ -18,7 +18,7 @@ public class Gravball extends Ball {
     }
 
     public void falle() {
-        kugel.verschiebe(0, -1 * a*  , 0);
+        kugel.verschiebe(0, -1 * a, 0);
         if (getroffen()) {
             a = a * -1;
 
