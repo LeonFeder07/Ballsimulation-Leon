@@ -45,7 +45,7 @@ public class Ballsimulation {
     speedball.farbwechsel(1-random,0.5+random/2,1-random/2);
     time=System.currentTimeMillis();
 }
-            ball.bewegeDich();
+            ball.bewegeDich;
             farbball.bewegeDich();
             gravball.bewegeDich();
             speedball.bewegeDich();
